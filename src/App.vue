@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NorrisJoke type="nicolas" />
+    <NorrisJoke type="chuck" />
   </div>
 </template>
 

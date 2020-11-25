@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container" v-if="icon">
-      <img :src="icon" alt="Chuck" />
+      <img :src="getIcon" alt="Chuck" />
       <div>
         <p>{{ text }}</p>
         <span>{{ date }}</span>
@@ -31,6 +31,13 @@ export default {
           this.text = data.value;
           this.date = data.updated_at;
         });
+    }
+  },
+  computed: {
+    getIcon() {
+      return this.type === "chuck"
+        ? this.icon
+        : "https://pbs.twimg.com/profile_images/3681800067/52aca11437c84b556072673c70480174.jpeg";
     }
   },
   props: {
