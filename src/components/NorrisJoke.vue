@@ -33,6 +33,16 @@ export default {
         });
     }
   },
+  props: {
+    type: {
+      type: String,
+      default: "chuck",
+      required: false,
+      validator: v => {
+        return ["nicolas", "chuck"].includes(v);
+      }
+    }
+  },
   data() {
     return {
       icon: "",
