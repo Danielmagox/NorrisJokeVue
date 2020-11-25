@@ -1,9 +1,15 @@
 <template>
-  <div class="container">
-    <img :src="icon" alt="Chuck" />
-    <div>
-      <p>{{ text }}</p>
-      <span>{{ date }}</span>
+  <div>
+    <div class="container" v-if="icon">
+      <img :src="icon" alt="Chuck" />
+      <div>
+        <p>{{ text }}</p>
+        <span>{{ date }}</span>
+      </div>
+    </div>
+    <div class="container" v-else>
+      <img src="https://shortpixel.com/img/spinner2.gif" alt="loading" />
+      loading
     </div>
   </div>
 </template>
