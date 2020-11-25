@@ -37,4 +37,33 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.container {
+  display: inline-flex;
+  max-width: 500px;
+  border: 1px solid #999;
+  padding: 5px;
+  padding-right: 20px;
+  border-radius: 10px;
+  font-family: "Montserrat";
+  background: #eee;
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+p {
+  margin: 0;
+}
+span {
+  font-family: Arial;
+  font-size: 12px;
+  color: purple;
+}
+</style>
