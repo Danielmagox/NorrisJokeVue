@@ -1,6 +1,10 @@
 <template>
-  <div>
-    Norris Joke
+  <div class="container">
+    <img :src="icon" alt="Chuck" />
+    <div>
+      <p>{{ text }}</p>
+      <span>{{ date }}</span>
+    </div>
   </div>
 </template>
 
@@ -8,6 +12,10 @@
 const URL = "https://api.chucknorris.io/jokes/random";
 export default {
   name: "Norris Joke",
+  created() {
+    //when component is created fetchApi is executed
+    this.fetchApi();
+  },
   methods: {
     fetchApi() {
       fetch(URL)
